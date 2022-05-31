@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Tooltip } from 'bootstrap/dist/js/bootstrap.esm.min.js'
 
 class Orders extends React.Component {
   constructor(props) {
@@ -19,16 +18,9 @@ class Orders extends React.Component {
     .then(todos => {
       this.setState({todos})
     });
-
-
   }
 
   renderTodos(todos) {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new Tooltip(tooltipTriggerEl)
-    })
-
     return (
       todos.map((todo, i) => {
         return (
@@ -44,11 +36,6 @@ class Orders extends React.Component {
             </td>
             <td>
               <a href='#' onClick={() => this.removeTodo(i)}>Удалить</a>
-            </td>
-            <td>
-              <a href='#' className="c-red" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-                Tooltip on top
-              </a>
             </td>
           </tr>
         )
