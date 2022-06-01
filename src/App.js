@@ -3,7 +3,7 @@ import './App.css';
 import Welcome from './pages/index.js';
 import Page404 from './pages/Page404.js';
 import Orders from './pages/orders.js';
-
+import Page from './pages/Page.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -17,6 +17,9 @@ function getPage() {
 
     case '/orders':
       return <Orders/>;
+
+    case '/123':
+      return <Page/>;
 
     default:
       return <Page404/>;
