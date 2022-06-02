@@ -1,17 +1,19 @@
-html, body, .App {
+html, body, .App, #root {
   background: #ebebeb;
-
+  height: 100%;
 }
 .App {
   text-align: center;
 }
 
 .cat-fact {
-  width: 700px;
-  margin: 16px auto;
+  margin: 0 auto;
   padding: 16px;
   background: white;
-  border-radius: 8px;
+}
+
+.cat-fact + .cat-fact {
+  border-top: 1px solid #dddddd;
 }
 
 .todos-container {

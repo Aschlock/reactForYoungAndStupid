@@ -1,14 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "bootstrap";
+import React from 'react';
+
 import Welcome from './pages/index.js';
 import Page404 from './pages/Page404.js';
 import Orders from './pages/orders.js';
 import Examples from './pages/Examples.js';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-const залупа = "123";
 
 function getPage() {
   switch(window.location.pathname) {
@@ -26,8 +28,9 @@ function getPage() {
   }
 }
 
+
+
 function App() {
-  console.log(window.location)
   return (
     <div className="App">
       {getPage()}

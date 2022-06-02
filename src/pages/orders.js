@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TodoRow from '../components/todo/TodoRow.js';
+
 
 class Orders extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class Orders extends React.Component {
 
     this.finishTodo = this.finishTodo.bind(this);
     this.renderTodos = this.renderTodos.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
   }
 
   componentDidMount() {
@@ -24,20 +27,13 @@ class Orders extends React.Component {
     return (
       todos.map((todo, i) => {
         return (
-          <tr key={todo.id}>
-            <td>
-              <input className="form-check-input" type="checkbox" checked={todo.completed} onChange={() => this.finishTodo(i)}/>
-            </td>
-            <td>
-              {todo.id}
-            </td>
-            <td>
-              {todo.title}
-            </td>
-            <td>
-              <a href='#' onClick={() => this.removeTodo(i)}>Удалить</a>
-            </td>
-          </tr>
+          <TodoRow completed={todo.completed}
+                   id={todo.id}
+                   title={todo.title}
+                   i={i}
+                   onFinishTodo={this.finishTodo}
+                   onRemoveTodo={this.removeTodo}
+                   key={todo.id}/>
         )
       })
     )
@@ -66,27 +62,35 @@ class Orders extends React.Component {
     return (
       <>
         <h1>Orders</h1>
-        <div className="todos-container">
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  Завершено
-                </th>
-                <th>
-                  Номер задачи
-                </th>
-                <th>
-                  Текст
-                </th>
-                <th>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.renderTodos(this.state.todos)}
-            </tbody>
-          </table>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="card shadow-sm">
+                <div className="card-body">
+                  <table className="table table-hover table-bordered">
+                    <thead>
+                      <tr>
+                        <th>
+                          Завершено
+                        </th>
+                        <th>
+                          Номер задачи
+                        </th>
+                        <th>
+                          Текст
+                        </th>
+                        <th>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {this.renderTodos(this.state.todos)}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </>
     )

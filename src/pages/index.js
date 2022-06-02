@@ -30,17 +30,27 @@ class Welcome extends React.Component {
 
   renderFacts() {
     let factsArray = this.state.catFacts;
-    return factsArray.map((fact, i) => <p class="cat-fact" key={i}>{fact.text}</p>);
+    return factsArray.map((fact, i) => <div class="cat-fact" key={i}>{fact.text}</div>);
   }
 
   render() {
     return (
       <>
-        <h1>Привет, {this.props.name}</h1>
-        <div>{this.state.factsLenth}</div>
-        <div>{this.state.date.toLocaleString()}</div>
-        <button className="btn btn-primary" onClick={this.clack}>123</button>
-        {this.renderFacts()}
+        <div className="container">
+          <div className="row justify-content-center">
+            <div class="col-6">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h1>Привет, {this.props.name}</h1>
+                  <div>{this.state.factsLenth}</div>
+                  <div>{this.state.date.toLocaleString()}</div>
+                  <button className="btn btn-primary mb-3" onClick={this.clack}>123</button>
+                  {this.renderFacts()}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </>
     );
   }
