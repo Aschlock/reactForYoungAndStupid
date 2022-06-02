@@ -3,7 +3,7 @@ import './App.css';
 import Welcome from './pages/index.js';
 import Page404 from './pages/Page404.js';
 import Orders from './pages/orders.js';
-import Page from './pages/Page.js';
+import Examples from './pages/Examples.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -18,8 +18,8 @@ function getPage() {
     case '/orders':
       return <Orders/>;
 
-    case '/123':
-      return <Page/>;
+    case '/examples':
+      return <Examples/>;
 
     default:
       return <Page404/>;

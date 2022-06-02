@@ -4,7 +4,7 @@ import {Tooltip, Toast} from 'bootstrap/dist/js/bootstrap.esm.min.js';
 
 const { useState, useEffect, useRef, useLayoutEffect } = React;
 
-function Page() {
+function Examples() {
   const [count, setCount] = React.useState(0);
 
   function handleClick() {
@@ -25,7 +25,7 @@ function Page() {
     document.title = `${count}`;
   });
 
-  var [toast, setToast] = useState(false);
+  var [toast, setToast] = React.useState(false);
   const toastRef = useRef();
 
   useEffect(() => {
@@ -47,16 +47,16 @@ function Page() {
   })
 
 
-  var [toasts, setToasts] = useState([]);
+  var [toasts, setToasts] = React.useState([]);
 
   useEffect(() => {
-    let toast = document.querySelector(`#qwe${toasts.length - 1}`);
-    if (toast) {
-      let a = new Toast(toast);
-      a.show();
+    let toastDOM = document.querySelector(`#qwe${toasts.length - 1}`);
+    if (toastDOM && !toastDOM.classList.contains('show')) {
+      let toast = new Toast(toastDOM);
+      toast.show();
 
-      toast.addEventListener('hidden.bs.toast', function () {
-        toast.remove()
+      toastDOM.addEventListener('hidden.bs.toast', function () {
+        toastDOM.remove()
       });
     }
   })
@@ -121,4 +121,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default Examples;
