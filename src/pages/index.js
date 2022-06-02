@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
 class Welcome extends React.Component {
   constructor(props) {
     super(props);
@@ -30,17 +31,17 @@ class Welcome extends React.Component {
 
   renderFacts() {
     let factsArray = this.state.catFacts;
-    return factsArray.map((fact, i) => <div class="cat-fact" key={i}>{fact.text}</div>);
+    return factsArray.map((fact, i) => <div className="cat-fact" key={i}>{fact.text}</div>);
   }
 
   render() {
     return (
       <>
-        <div className="container">
+        <div className="container-lg">
           <div className="row justify-content-center">
-            <div class="col-6">
-              <div class="card shadow-sm">
-                <div class="card-body">
+            <div className="col-lg-6 col-xs-12">
+              <div className="card shadow-sm">
+                <div className="card-body">
                   <h1>Привет, {this.props.name}</h1>
                   <div>{this.state.factsLenth}</div>
                   <div>{this.state.date.toLocaleString()}</div>

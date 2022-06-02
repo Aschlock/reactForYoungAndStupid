@@ -5,35 +5,18 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap";
 import React from 'react';
 
-import Welcome from './pages/index.js';
-import Page404 from './pages/Page404.js';
-import Orders from './pages/orders.js';
-import Examples from './pages/Examples.js';
+import IndexLayout from './layouts/IndexLayout.js';
 
 
-
-function getPage() {
-  switch(window.location.pathname) {
-    case '/':
-      return <Welcome name="AAAAAAAAA"/>;
-
-    case '/orders':
-      return <Orders/>;
-
-    case '/examples':
-      return <Examples/>;
-
-    default:
-      return <Page404/>;
-  }
+function getLayout() {
+  let getPage = window.location.pathname.includes('admin') ? '' : <IndexLayout/>;
+  return getPage;
 }
-
-
 
 function App() {
   return (
     <div className="App">
-      {getPage()}
+      {getLayout()}
     </div>
   );
 }
