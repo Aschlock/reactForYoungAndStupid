@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.task-check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 2.5em;
+  height: 2.5em;
+  z-index: 1;
+  fill: #228cdb;
+  -webkit-animation: an-check-data-v-008b4880 .3s ease-in-out;
+  animation: an-check-data-v-008b4880 .3s ease-in-out;
+}
+
+.task-body .donut-segment {
+  transition: .2s;
+}
+
+.task-body:hover .donut-segment {
+  stroke-width: 5px;
+  transition: .2s;
+}

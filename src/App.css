@@ -2,9 +2,9 @@ html, body, .App, #root {
   background: #ebebeb;
   height: 100%;
 }
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .cat-fact {
   margin: 0 auto;

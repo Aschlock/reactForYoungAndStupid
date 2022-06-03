@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Welcome from '../pages/index.js';
+import CatFacts from '../pages/CatFacts.js';
 import Page404 from '../pages/Page404.js';
 import Orders from '../pages/orders.js';
 import Examples from '../pages/Examples.js';
+import MainPage from '../pages/main/MainPage.js';
 import Navbar from '../components/main/Navbar.js'
 
 function getPage() {
   switch(window.location.pathname) {
     case '/':
-      return <Welcome name="AAAAAAAAA"/>;
+      return <MainPage/>;
+
+    case '/catfacts':
+      return <CatFacts name="нейм"/>;
 
     case '/orders':
       return <Orders/>;
