@@ -16,7 +16,7 @@ export default function MainAdminPage() {
           <td className="text-center" style={{width: '0%'}}>
             {Math.floor(Math.random() * 100)}
           </td>
-          <td className="text-nowrap text-center" >
+          <td className="text-nowrap text-center">
             <div className="text-left">
               <p className="mb-0 text-left">{(new Date()).toLocaleDateString()}</p>
               <small className="text-muted text-left">{(new Date()).toLocaleTimeString()}</small>
