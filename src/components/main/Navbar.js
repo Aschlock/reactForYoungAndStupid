@@ -3,12 +3,6 @@ import ReactDOM from 'react-dom';
 
 
 export default function Navbar() {
-  const [spinner, setSpinner] = React.useState(false);
-  function handleClick() {
-    setSpinner(!spinner);
-    setTimeout(function() {setSpinner(false)}, 1000)
-  }
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3 shadow-sm">
       <div className="container">
@@ -31,7 +25,7 @@ export default function Navbar() {
             </li>
           </ul>
           <div>
-            <a className="btn btn-primary py-1 text-white" href="#">
+            <a className="btn btn-primary py-1 text-white" href="/admin">
               Вход
             </a>
           </div>
