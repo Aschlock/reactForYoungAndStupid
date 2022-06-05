@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainAdminPage from './pages/admin/MainAdminPage.js';
-import Page404 from './pages/Page404.js';
+import MainAdminPage from '../pages/admin/MainAdminPage.js';
+import Page404 from '../pages/Page404.js';
 
 
 function getPage() {
