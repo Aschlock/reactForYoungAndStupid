@@ -38,13 +38,18 @@ class CatFacts extends React.Component {
     return factsArray.map((fact, i) => <div className="cat-fact" key={i}>{fact.text}</div>);
   }
 
+  renderFacts2() {
+    let factsArray = this.state.catFacts;
+    return factsArray.map((fact, i) => <div className="cat-fact2 text-white" key={i}>> {fact.text}</div>);
+  }
+
   render() {
     return (
       <>
         <div className="container-lg">
-          <div className="row justify-content-center">
+          <div className="row justify-content-center mb-3">
             <div className="col-lg-6 col-xs-12">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm text-center">
                 <div className="card-body">
                   <div className="d-flex justify-content-between">
                     <h3>Время фактов, {this.props.name}</h3>
@@ -56,12 +61,26 @@ class CatFacts extends React.Component {
                     <span className="badge bg-danger mx-2 align-bottom fw-normal">Сомнительные</span>
                   </div>
                   <button className="btn btn-primary mb-1 text-white" style={{width: '150px'}} onClick={this.clack}>{this.state.btnText}</button>
-                  {this.renderFacts()}
+                  {/* this.renderFacts() */}
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="row justify-content-center">
+            <div class="col-6">
+              <div className="card bg-black">
+                <div className="card-body">
+                  {this.renderFacts2()}
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+
+
       </>
     );
   }

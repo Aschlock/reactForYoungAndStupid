@@ -1,51 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import OrderRow from '../../components/admin/orders/OrderRow.js';
+import OrdersListSmall from '../../components/admin/orders/OrdersListSmall.js';
 import {Popover} from 'bootstrap';
 
 
 export default function MainAdminPage() {
-
-  function generateOrderRows() {
-    let generated = [];
-    for (let i in '12345123451234512345') {
-      generated.push((
-        <tr>
-          <td className="text-center" style={{width: '0%'}}>
-            <span className="badge rounded-pill bg-primary mx-2 align-bottom fw-normal">В работе</span>
-          </td>
-          <td className="text-center" style={{width: '0%'}}>
-            {Math.floor(Math.random() * 100)}
-          </td>
-          <td className="text-nowrap text-center">
-            <div className="text-left">
-              <p className="mb-0 text-left">{(new Date()).toLocaleDateString()}</p>
-              <small className="text-muted text-left">{(new Date()).toLocaleTimeString()}</small>
-            </div>
-          </td>
-          <td className="text-center">
-          {Math.floor(Math.random() * 10000) + ' ₽'}
-          </td>
-          <td>
-          123
-          </td>
-          <td>
-          Отправлено
-          </td>
-          <td className="text-center" style={{width: '0%'}}>
-          <div className="dropdown">
-            <a href="#" className="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-three-dots fs-4"></i></a>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a className="dropdown-item" href="#"><i className="bi bi-search me-2"></i> Открыть</a></li>
-              <li><a className="dropdown-item" href="#"><i className="bi bi-pencil-fill me-2"></i> Редактировать</a></li>
-              <li><a className="dropdown-item text-danger" href="#"><i className="bi bi-trash-fill me-2"></i> Удалить</a></li>
-            </ul>
-          </div>
-          </td>
-        </tr>
-      ))
-    }
-    return generated
-  }
 
   function generateStatCards() {
     let generated = [];
@@ -208,48 +168,7 @@ export default function MainAdminPage() {
       <div className="container mt-3 mb-3">
         <div className="row">
           <div className="col-12">
-            <div className="card shadow-sm">
-              <div className="card-header py-2 d-flex justify-content-between">
-                <div>
-                  <h3 className="text-muted">Заявки</h3>
-                </div>
-                <div className="align-self-center">
-                  <a href='#'>Все заявки</a>
-                </div>
-          </div>
-
-              <div className="card-body py-2" style={{height: '500px', 'overflowY': 'scroll'}}>
-                <table className="table table-hover align-middle">
-                  <thead>
-                    <tr className="text-muted text-center">
-                      <th>
-                        Статус
-                      </th>
-                      <th className="text-nowrap text-center">
-                        Заказ №
-                      </th>
-                      <th className="text-nowrap text-center">
-                        Дата создания
-                      </th>
-                      <th>
-                        Сумма
-                      </th>
-                      <th>
-                        Наименование
-                      </th>
-                      <th>
-                        СМС
-                      </th>
-                      <th>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {generateOrderRows()}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            <OrdersListSmall/>
           </div>
 
         </div>
