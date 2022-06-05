@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoRow from '../components/todo/TodoRow.js';
+import TodoRow from './components/todo/TodoRow.js';
 
 
 class Orders extends React.Component {
@@ -40,8 +40,8 @@ class Orders extends React.Component {
   }
 
   finishTodo(index) {
-    let todos = [...this.state.todos];
-    todos.splice(index, 1, {...todos[index]});
+    let todos = [..this.state.todos];
+    todos.splice(index, 1, {..todos[index]});
     todos[index].completed = !todos[index].completed;
 
     this.setState({
@@ -50,7 +50,7 @@ class Orders extends React.Component {
   }
 
   removeTodo(index) {
-    let todos = [...this.state.todos];
+    let todos = [..this.state.todos];
     todos.splice(index, 1);
 
     this.setState({

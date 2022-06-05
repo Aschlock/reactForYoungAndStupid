@@ -1,4 +1,4 @@
-import '../../img/undraw_empty_street_re_atjq.svg';
+import './img/undraw_empty_street_re_atjq.svg';
 
 
 export default function MainPage() {
