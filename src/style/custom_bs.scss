@@ -4,9 +4,10 @@ $danger: #fe4a49;
 $success: #9BC53D;
 $body-bg: #F5F5F5;
 $table-group-separator-color: #dee2e6;
+$enable-negative-margins: true;
 
 $card-border-radius: 8px;
 $input-btn-padding-x: 1rem;
 $border-radius: .5rem;
 
-@import '~bootstrap/scss/bootstrap.scss'
+@import '~bootstrap/scss/bootstrap.scss';

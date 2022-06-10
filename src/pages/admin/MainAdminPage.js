@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import OrderRow from '../../components/admin/orders/OrderRow.js';
-import OrdersListSmall from '../../components/admin/orders/OrdersListSmall.js';
-import OrderCards from '../../components/admin/orders/OrderCards.js';
+import OrdersOverviewTable from '../../components/admin/orders/OrdersOverviewTable.js';
+import OrderOverviewCards from '../../components/admin/orders/OrderOverviewCards.js';
 import {Popover} from 'bootstrap';
 
 
 export default function MainAdminPage() {
-  console.log(window)
   function generateStatCards() {
     let generated = [];
     let objects = [
@@ -52,10 +51,10 @@ export default function MainAdminPage() {
             <div className="card-body py-2 d-flex justify-content-between">
               <div>
                 <div className="text-muted">{element.title}</div>
-                <p className={"h3 " + element.status}><span className="font-weight-bold">{element.sign}{element.count}</span></p>
+                <p className={"fs-4 m-0 " + element.status}><b className="font-weight-bold">{element.sign}{element.count}</b></p>
               </div>
-              <div>
-                <i className={"bi fs-1 text-muted " + element.icon}></i>
+              <div className="d-flex justify-content-center flex-column" style={{marginTop: "-1px"}}>
+                <i className={"bi fs-2 text-muted lh-1 " + element.icon}></i>
               </div>
             </div>
           </div>
@@ -154,9 +153,7 @@ export default function MainAdminPage() {
 
       <div className="container mt-3 mb-3">
         <div className="row">
-          <div className="col-12">
-            {window.outerWidth >= 1024 ? <OrdersListSmall/> : <OrderCards />}
-          </div>
+            {window.outerWidth >= 992 ? <OrdersOverviewTable/> : <OrderOverviewCards />}
         </div>
       </div>
 

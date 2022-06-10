@@ -6,6 +6,7 @@ import Orders from '../pages/orders.js';
 import Examples from '../pages/Examples.js';
 import MainPage from '../pages/main/MainPage.js';
 import Navbar from '../components/main/Navbar.js'
+import Footer from '../components/main/Footer.js'
 
 function getPage() {
   switch(window.location.pathname) {
@@ -31,6 +32,7 @@ export default function IndexLayout() {
     <>
       <Navbar/>
       {getPage()}
+      <Footer/>
     </>
   )
 };

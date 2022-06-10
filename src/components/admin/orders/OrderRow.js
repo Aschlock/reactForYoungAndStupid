@@ -15,19 +15,19 @@ export default function OrderRow({id, status, cost, currency, created_at, items,
 
     switch(status) {
       case "Новая":
-        statusClass = "bg-success";
+        statusClass = "alert-success";
         break;
 
       case "Просрочена":
-        statusClass = "bg-danger";
+        statusClass = "alert-danger";
         break;
 
       case "В работе":
-        statusClass = "bg-primary";
+        statusClass = "alert-primary";
         break;
 
       default:
-        statusClass = "bg-secondary";
+        statusClass = "alert-secondary";
         break;
     }
 
@@ -56,7 +56,7 @@ export default function OrderRow({id, status, cost, currency, created_at, items,
         {id}
       </td>
       <td className="">
-        {cost} {currency}
+        <b>{cost}</b> {currency}
       </td>
       <td>
         <div>

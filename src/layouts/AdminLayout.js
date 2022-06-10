@@ -17,7 +17,9 @@ function getPage() {
 export default function AdminLayout() {
   return (
     <>
-      {getPage()}
+
+        {getPage()}
+      
     </>
   )
 };

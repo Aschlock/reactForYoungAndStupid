@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3 shadow-sm">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3 shadow-sm position-fixed w-100" style={{zIndex: 1}}>
       <div className="container">
         <a className="navbar-brand" href="/">Navbar</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -4,7 +4,7 @@ import '../../img/undraw_empty_street_re_atjq.svg';
 export default function MainPage() {
   return (
     <>
-      <div className="container h-100" style={{marginTop: '-72px'}}>
+      <div className="container h-100">
         <div className="row h-100 align-items-center">
           <div className="col-sm-12 col-md-6 text-center">
             <h1 className="display-3" style={{fontWeight: 'bold'}}>
