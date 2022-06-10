@@ -31,7 +31,7 @@ export default function OrderRow({id, status, cost, currency, created_at, items,
         break;
     }
 
-    return (<span className={`badge ${statusClass} mx-2 align-bottom fw-normal`}>{status}</span>);
+    return (<span className={`badge ${statusClass} mx-2 align-bottom fw-normal`} style={{width: '84px',}}>{status}</span>);
   };
 
   function generateServices() {

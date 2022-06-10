@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import OrderRow from '../../components/admin/orders/OrderRow.js';
 import OrdersListSmall from '../../components/admin/orders/OrdersListSmall.js';
+import OrderCards from '../../components/admin/orders/OrderCards.js';
 import {Popover} from 'bootstrap';
 
 
 export default function MainAdminPage() {
-
+  console.log(window)
   function generateStatCards() {
     let generated = [];
     let objects = [
@@ -46,7 +47,7 @@ export default function MainAdminPage() {
 
     objects.forEach(element => {
       generated.push((
-        <div className="col-3" key={element.id}>
+        <div className="col-12 col-md-6 col-lg-6 col-xl-3 mb-3 mb-xl-0" key={element.id}>
           <div className="card shadow-sm">
             <div className="card-body py-2 d-flex justify-content-between">
               <div>
@@ -102,7 +103,7 @@ export default function MainAdminPage() {
     objects.forEach(element => {
       generated.push((
 
-          <div className="col-3">
+          <div className="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
             <div className="card shadow-sm">
               <div className="card-body task-body py-2 d-flex">
                 <div className="me-3 position-relative">
@@ -154,7 +155,7 @@ export default function MainAdminPage() {
       <div className="container mt-3 mb-3">
         <div className="row">
           <div className="col-12">
-            <OrdersListSmall/>
+            {window.outerWidth >= 1024 ? <OrdersListSmall/> : <OrderCards />}
           </div>
         </div>
       </div>
