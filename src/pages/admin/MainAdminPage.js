@@ -1,7 +1,6 @@
 import OrderRow from '../../components/admin/orders/OrderRow.js';
 import OrdersOverviewTable from '../../components/admin/orders/OrdersOverviewTable.js';
 import OrderOverviewCards from '../../components/admin/orders/OrderOverviewCards.js';
-import {Popover} from 'bootstrap';
 
 
 export default function MainAdminPage() {

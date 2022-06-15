@@ -1,12 +1,14 @@
 import React from 'react';
-import {Tooltip, Toast, Dropdown} from 'bootstrap/dist/js/bootstrap.esm.min.js';
+import * as bootstrap from 'bootstrap/dist/js/bootstrap.bundle.js';
 
 
 export default function OrderRow({id, status, cost, currency, created_at, items, user}) {
-  React.useEffect(() => {
+
+
+  React.useEffect(()=>{
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new Tooltip(tooltipTriggerEl, {html: true})
+      return new bootstrap.Tooltip(tooltipTriggerEl, {html: true})
     })
   }, []);
 
