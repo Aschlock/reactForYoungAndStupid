@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import TodoRow from '../components/todo/TodoRow.js';
 
 

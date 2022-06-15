@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import CatFacts from '../pages/CatFacts.js';
 import Page404 from '../pages/Page404.js';
 import Orders from '../pages/orders.js';

@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import OrderRow from '../../components/admin/orders/OrderRow.js';
 import OrdersOverviewTable from '../../components/admin/orders/OrdersOverviewTable.js';
 import OrderOverviewCards from '../../components/admin/orders/OrderOverviewCards.js';
@@ -108,11 +106,11 @@ export default function MainAdminPage() {
                 <div className="me-3 position-relative">
                   {element.current >= element.goal? checkSvg : ''}
                   <svg width="64px" height="64px" viewBox="0 0 42 42" className="donut" style={{transform: 'rotate(-90deg)'}}>
-                  <circle cx="21" cy="21" r="15.91549430918954" fill="#fff" className="donut-hole">
+                  <circle cx="21" cy="21" r="16" fill="#fff" className="donut-hole">
                   </circle>
-                  <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="whitesmoke" strokeWidth="3" className="donut-ring">
+                  <circle cx="21" cy="21" r="16" fill="transparent" stroke="whitesmoke" strokeWidth="3" className="donut-ring">
                   </circle>
-                  <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#228cdb" strokeWidth="3" strokeDasharray={element.current + ' ' + (100 - element.current)} strokeDashoffset="0" className="donut-segment"></circle>
+                  <circle cx="21" cy="21" r="16" fill="transparent" stroke="#228cdb" strokeWidth="3" strokeDasharray={element.current + ' ' + (100 - element.current)} strokeDashoffset="0" className="donut-segment"></circle>
                   </svg>
                 </div>
 
@@ -141,7 +139,10 @@ export default function MainAdminPage() {
           <div className="d-flex justify-content-between">
             <h1>Dashboard</h1>
             <div>
-              <button className="btn btn-primary text-white">Кнопка!</button>
+              <button className="btn btn-secondary100 border border-secondary200 text-white p-0 position-relative" style={{width: '40px', height: '40px'}}>
+                <i class="bi bi-person text-secondary200"></i>
+                <div className="position-absolute bg-danger rounded border border-white" style={{width: '12px', height: '12px', top: '-4px', right: '-4px'}}></div>
+              </button>
             </div>
           </div>
           <div>
@@ -160,13 +161,33 @@ export default function MainAdminPage() {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h2>
-              Выполнение плана
+            <h2 className="mb-3">
+              Сотрудники
             </h2>
           </div>
         </div>
-        <div className="row mb-3">
-          {generateEmployeeStat()}
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-6">
+            <div className="card shadow-sm">
+              <div className="card-header">
+                <h5 className="m-0 text-secondary">Выполнение плана</h5>
+              </div>
+              <div className="card-body">
+                <div className="task-body">
+                  <svg width="32px" height="32px" viewBox="0 0 42 42" className="donut" style={{transform: 'rotate(-90deg)'}}>
+                  <circle cx="21" cy="21" r="16" fill="#fff" className="donut-hole">
+                  </circle>
+                  <circle cx="21" cy="21" r="16" fill="transparent" stroke="whitesmoke" strokeWidth="2" className="donut-ring">
+                  </circle>
+                  <circle cx="21" cy="21" r="16" fill="transparent" stroke="#228cdb" strokeWidth="5" strokeDasharray="50 50" strokeDashoffset="0" className="donut-segment"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

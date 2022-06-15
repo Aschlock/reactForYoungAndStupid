@@ -42,8 +42,10 @@ export default function OrderRow({id, status, cost, currency, created_at, items,
         liArr.push(`<li>${item.name}</li>`);
       })
 
+      liArr.shift();
+
       let ulItems = `<ul class='m-0 p-0'>${liArr.join('')}</ul>`;
-      return (<li><a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={ulItems}>+{items.length} позиций</a></li>);
+      return (<li><a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title={ulItems}>+{items.length -1} позиций</a></li>);
     }
   };
 
@@ -81,7 +83,7 @@ export default function OrderRow({id, status, cost, currency, created_at, items,
       <td className="text-center" style={{width: '0%'}}>
         <div className="dropdown">
           <a href="#" className="text-black" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-three-dots fs-4"></i></a>
-          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <ul className="dropdown-menu shadow-lg border-0" aria-labelledby="dropdownMenuButton1">
             <li><a className="dropdown-item" href="#"><i className="bi bi-search me-2"></i> Открыть</a></li>
             <li><a className="dropdown-item" href="#"><i className="bi bi-pencil-fill me-2"></i> Редактировать</a></li>
             <li><hr className="dropdown-divider"/></li>

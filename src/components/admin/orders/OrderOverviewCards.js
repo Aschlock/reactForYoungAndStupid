@@ -5,6 +5,7 @@ import OrderCard from './OrderCard.js';
 
 export default function OrderOverviewCards() {
   let [cards, setCards] = useState([]);
+
   console.log(fetchedOrders)
   useEffect(() => {
     //Будто бы fetch

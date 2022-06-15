@@ -1,10 +1,7 @@
 html, body, .App, #root {
-  background: #ebebeb;
+  background: #F5F5F5;
   height: 100%;
 }
-/* .App {
-  text-align: center;
-} */
 
 .cat-fact {
   margin: 0 auto;

@@ -1,5 +1,5 @@
-import React from 'react';
 import {Tooltip, Toast, Dropdown} from 'bootstrap/dist/js/bootstrap.esm.min.js';
+
 
 export default function OrderCard({id, status, cost, currency, created_at, items, user}) {
 

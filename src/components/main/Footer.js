@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="d-flex justify-content-center text-white bg-dark p-2">
+      <footer className="d-flex justify-content-center text-white bg-dark p-2 w-100">
         <i class={'bi user-select-none bi-dice-' + d6} onClick={() => roll(1,6)}></i>
       </footer>
     </>

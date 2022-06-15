@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 
 class CatFacts extends React.Component {
@@ -46,7 +45,7 @@ class CatFacts extends React.Component {
   render() {
     return (
       <>
-        <div className="container-lg">
+        <div className="container-lg h-100">
           <div className="row justify-content-center mb-3">
             <div className="col-lg-6 col-xs-12">
               <div className="card shadow-sm text-center">
